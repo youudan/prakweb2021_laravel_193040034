@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-  <title>WMR Blog | Home </title>
-</head>
+@section('title', $title)
 
-<body>
-  <h1>Halaman Home</h1>
-</body>
-
-</html>
+@section('content')
+<h1>Halaman Home</h1>
+@endsection
