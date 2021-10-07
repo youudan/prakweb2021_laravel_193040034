@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/about', function () {
+    return view('about', [
+        'name'  => 'Wijdan Muhammad Ridwanulloh',
+        'email' => '193040034.wijdan@mail.unpas.ac.id',
+        'image' => 'wijdan.png'
+    ]);
+});
+
+Route::get('/blog', function () {
+    return view('posts');
 });
