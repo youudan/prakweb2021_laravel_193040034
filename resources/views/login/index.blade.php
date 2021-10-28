@@ -12,17 +12,37 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
+
+    @if (session()->has('loginError'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{ session('loginError') }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
+
     <main class="form-signin">
-      <form>
+      <form action="/login" method="POST">
         <h1 class="h3 mb-3 fw-normal text-center">Please login</h1>
+        @csrf
 
         <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <input type="email" class="form-control  @error('email') is-invalid @enderror" id="floatingInput" placeholder="name@example.com" name="email" value="{{ old('email') }}" required>
           <label for="floatingInput">Email address</label>
+          @error('email')
+          <div class="invalid-feedback">
+            {{ $message }}
+          </div>
+          @enderror
         </div>
+
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <input type="password" class="form-control rounded-bottom  @error('password') is-invalid @enderror" id="floatingPassword" placeholder="Password" name="password" required>
           <label for="floatingPassword">Password</label>
+          @error('password')
+          <div class="invalid-feedback">
+            {{ $message }}
+          </div>
+          @enderror
         </div>
 
         <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
