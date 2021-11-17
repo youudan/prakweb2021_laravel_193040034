@@ -7,7 +7,7 @@
 
       <h1 class="mb-3">{{ $post->title }}</h1>
 
-      <a href="" class="btn btn-success">
+      <a href="/dashboard/posts" class="btn btn-success">
         <span data-feather="arrow-left"></span> Back to all my posts
       </a>
       <a href="/dashboard/posts/{{ $post->slug }}" class="btn btn-warning">
@@ -21,8 +21,6 @@
       <article class="my-3 fs-5">
         {!! $post->body !!}
       </article>
-
-      <a href="/posts" class="d-block mt-3">Back to Posts</a>
 
     </div>
   </div>
