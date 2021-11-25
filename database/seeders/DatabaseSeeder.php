@@ -17,16 +17,18 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        // User::create([
-        //     'name' => 'Wijdan Muhammad Ridwanulloh',
-        //     'email' => '193040034.wijdan@mail.unpas.ac.id',
-        //     'password' => bcrypt('12345')
-        // ]);
+        User::create([
+            'name' => 'Wijdan Muhammad Ridwanulloh',
+            'username' => 'wijdan',
+            'email' => '193040034.wijdan@mail.unpas.ac.id',
+            'password' => bcrypt('password')
+        ]);
 
         // User::create([
         //     'name' => 'Agung gumelar',
+        //     'username' => 'agung',
         //     'email' => '193040008.agung@mail.unpas.ac.id',
-        //     'password' => bcrypt('12345')
+        //     'password' => bcrypt('password')
         // ]);
 
         User::factory(3)->create();
@@ -35,6 +37,11 @@ class DatabaseSeeder extends Seeder
         Category::create([
             'name' => 'Web Programming',
             'slug' => 'web-programming'
+        ]);
+
+        Category::create([
+            'name' => 'Web Design',
+            'slug' => 'web-design'
         ]);
 
         Category::create([
