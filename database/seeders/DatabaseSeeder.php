@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Wijdan Muhammad Ridwanulloh',
             'username' => 'wijdan',
             'email' => '193040034.wijdan@mail.unpas.ac.id',
+            'is_admin' => true,
             'password' => bcrypt('password')
         ]);
 
