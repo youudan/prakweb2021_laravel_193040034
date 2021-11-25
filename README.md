@@ -9,10 +9,11 @@
 
 ## Demo Link
 Pertemuan 10 hosting link : <a href="https://wmrblog.000webhostapp.com">https://wmrblog.000webhostapp.com</a>
-Admin
-193040034.wijdan@mail.unpas.ac.id | password
-Non Admin 
-shakila.hutagalung@example.org | password
+<br><br>
+Admin<br>
+193040034.wijdan@mail.unpas.ac.id | password<br>
+Non Admin <br>
+shakila.hutagalung@example.org | password<br>
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
